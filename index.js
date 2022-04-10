@@ -19,7 +19,7 @@ app.use(
 );
 app.get("/", (request, response) => {
   pool.query(
-    'SELECT "players"."Player", "players"."height", "players"."weight", "players"."born", "modern_season_stats"."Year" FROM players INNER JOIN  modern_season_stats ON "modern_season_stats"."Player"="players"."Player"',
+    'SELECT "players"."Player", "players"."height", "players"."weight", "players"."born", "modern_season_stats"."Year", "modern_season_stats"."Position", "modern_season_stats"."PTS", "modern_season_stats"."AST" FROM players INNER JOIN  modern_season_stats ON "modern_season_stats"."Player"="players"."Player"',
     (error, results) => {
       if (error) {
         console.log(error);
