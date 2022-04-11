@@ -14,7 +14,7 @@ const app = express();
 const port = 4000;
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors()g);
 app.use(
   bodyParser.urlencoded({
     extended: true,
