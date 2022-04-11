@@ -1,6 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const Pool = require("pg").Pool;
+var cors = require("cors");
+
 const pool = new Pool({
   user: "postgres",
   host: "nba-visualization-project.ctxd45yjwfgs.us-east-2.rds.amazonaws.com",
@@ -12,6 +14,7 @@ const app = express();
 const port = 4000;
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use(
   bodyParser.urlencoded({
     extended: true,
