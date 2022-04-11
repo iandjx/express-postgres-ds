@@ -11,7 +11,7 @@ const pool = new Pool({
   port: 5432,
 });
 const app = express();
-const port = proces.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 app.use(bodyParser.json());
 app.use(cors());
